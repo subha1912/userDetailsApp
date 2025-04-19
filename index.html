@@ -6,10 +6,12 @@
   <title>User Registration</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
   <!-- Firebase App and Database -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
 </head>
 <body>
   <div class="container">
@@ -37,26 +39,6 @@
     <p id="success-message"></p>
   </div>
 
-  <!-- Firebase Config & Script -->
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyDrzoWLhGy_gF8_wB2dEyXmUN0AooRcuIE",
-      authDomain: "userdetailsapp-b8f56.firebaseapp.com",
-      databaseURL: "https://userdetailsapp-b8f56-default-rtdb.firebaseio.com",
-      projectId: "userdetailsapp-b8f56",
-      storageBucket: "userdetailsapp-b8f56.firebasestorage.app",
-      messagingSenderId: "469032332718",
-      appId: "1:469032332718:web:fc2aaf8c1ccba67ede6c3f"
-    };
-
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const database = firebase.database(app);
-  </script>
-
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
