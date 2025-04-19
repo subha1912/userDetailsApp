@@ -1,3 +1,16 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyDrzoWLhGy_gF8_wB2dEyXmUN0AooRcuIE",
+  authDomain: "userdetailsapp-b8f56.firebaseapp.com",
+  databaseURL: "https://userdetailsapp-b8f56-default-rtdb.firebaseio.com",
+  projectId: "userdetailsapp-b8f56",
+  storageBucket: "userdetailsapp-b8f56.firebasestorage.app",
+  messagingSenderId: "469032332718",
+  appId: "1:469032332718:web:fc2aaf8c1ccba67ede6c3f"
+};
+
+firebase.initializeApp(firebaseConfig);
+window.database = firebase.database();
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("userForm");
   const submitButton = document.getElementById("submit-btn");
