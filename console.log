@@ -1,0 +1,36 @@
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Retrieve form data
+    const fname = document.getElementById("first-name").value.trim();
+    const lname = document.getElementById("last-name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const address = document.getElementById("address").value.trim();
+
+    // Check if all fields are filled
+    if (!fname || !lname || !phone || !email || !address) {
+      alert("Please fill all fields correctly.");
+      console.log("Form fields are missing.");
+      return;
+    }
+
+    // Data submission
+    const newUserRef = window.database.ref("users").push();
+    newUserRef.set({
+      firstName: fname,
+      lastName: lname,
+      phoneNumber: phone,
+      emailId: email,
+      address: address
+    }).then(() => {
+      // Display success message
+      document.getElementById("success-message").innerText = "Registration Successful!";
+      console.log("Data has been successfully saved to Firebase.");
+    }).catch((error) => {
+      console.log("Error saving data to Firebase:", error);
+    });
+
+    // Reset the form
+    form.reset();
+});
