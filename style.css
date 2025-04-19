@@ -80,7 +80,7 @@ body {
 }
 
 #success-message {
-  color: lightgreen;
+  color: darkred;
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
